@@ -1,183 +1,277 @@
-* {
-    margin: 0;
-    padding: 0;
-    font-family: "Poppins", sans-serif;
-    text-align: left;
+    /* barre plus grosse, responsive */
+
+
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: "Poppins", sans-serif;
+        text-align: left;
+        
+    }
+
+    html {
+        width: 100%;
+        height: 100%;
+    }
     
-  }
-
-  html {
-    width: 100%;
-    height: 100%;
-  }
-  
-  body {
-    height: 100%;
-    width: 100%;
-    background-color: #ffffff;
-    overflow: hidden;
-    position: relative;
-  }
-
-.logoaccueil {
-    margin-top: 2%;
-    margin-left: 2%;
-    width: 20vh;
-    height: 10vh;
-  }
-  
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #ffffff00;
-    width: 100%;
-    height: 100px;
-    position: relative; /* Ajout de la position relative */
-  }
-
-  .background {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 1; /* Sous la div .musicnootjes */
-}
-
-.wave {
-    width: 100%; 
-    margin: 0;
-    display: block;  /* Assure que le SVG est affiché en tant que bloc pour occuper toute la largeur */
-}
-
-  header nav ul {
-    list-style: none;
-    display: flex;
-    align-items: center;
-  }
-  
-  header nav ul a {
-    text-decoration: none;
-    color: #f3f5ff;
-    margin: 0 2%; /* Ajout de la marge */
-  }
-  
-  header nav ul a:hover {
-    color: #f3f5ff;
-  }
-  .fileInput {
-    color: #ffffff; /* rend le texte "Open file" en blanc */
-    display: block;
-    width: 70vh;
-    height: 4vh;
-    padding-left: 10px;
-    background-color: #334482;
-    border: none;
-    border-radius: 30px;
-    cursor: pointer; /* change le curseur pour indiquer que c'est cliquable */
-    outline: none; /* retire le contour par défaut lors de la sélection de l'input */
-    appearance: none; /* pour retirer l'apparence par défaut dans certains navigateurs */
-    -webkit-appearance: none; /* pour Chrome et Safari */
-    -moz-appearance: none; /* pour Firefox */
-}
-
-.fileInput::-webkit-file-upload-button {
-    visibility: hidden; /* retire le bouton par défaut dans Chrome et Safari */
-}
-
-.fileInput::before {
-    content: "Open file"; /* texte à afficher */
-    display: inline-block;
-    color: #ffffff; /* couleur du texte */
-    background-color: #334482;
-    border: none;
-    border-radius: 30px;
-    padding: 8px;
-}
-  .searchbar {
-    color: #ffffff;
-    border-radius: 30px;
-    width: 70vh;
-    height: 4vh;
-    padding-left: 10px; 
-    background-color: #334482;
-    border: none;
-  }
-  #searchForm {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
-
-.musicnootjes {
-    color: #334482;
-    display: block;
-    margin: auto;
-    position: absolute; /* Position absolue */
-    bottom: 20px; /* À partir du bas de la page */
-    left: 50%; /* Centré horizontalement */
-    transform: translateX(-50%); /* Pour centrer parfaitement */
-    width: 60%;
-    min-width: 300px;
-    height: 20%;
-    z-index: 2; /* Empiler par-dessus la wave */
-}
-  
-  .noot-1,
-  .noot-2,
-  .noot-3,
-  .noot-4 {
-    position: absolute;
-    animation: notes 2s infinite linear;
-    font-size: 35px;
-    opacity: 0;
-  }
-  
-  .noot-1 {
-    top: 60px;
-    left: 0;
-    animation-delay: 0.5s;
-  }
-  
-  .noot-2 {
-    top: 30px;
-    left: 30%;
-    animation-delay: 1s;
-  }
-  
-  .noot-3 {
-    top: 90px;
-    left: 60%;
-    animation-delay: 1.5s;
-  }
-  
-  .noot-4 {
-    top: 40px;
-    left: 90%;
-    animation-delay: 2s;
-  }
-  
-  @keyframes notes {
-    0% {
-      transform: scale(1) translate(0, 0);
-      opacity: 0;
+    body {
+        height: 100%;
+        width: 100%;
+        background-color: #ffffff;
+        overflow: hidden;
+        position: relative;
     }
-    50% {
-      opacity: 1;
-      transform: scale(1.5) translate(50%, -50%);
+
+
+    .logo-title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
-    80% {
-      opacity: 0;
-      transform: scale(1.5) translate(100%, -100%);
+    
+    .logo {
+        background-color: #333333; 
+        width: 30vh; 
+        height:30vh; 
+        border-radius: 50%;
+        border: 5px solid rgb(255, 255, 255); /* Bordure de 10px en noir */
+        display: flex;
+        align-items: center;
+        justify-content: center; /* Pour centrer les lignes */
+        box-sizing: border-box; /* Pour s'assurer que la bordure est incluse dans la largeur/hauteur totale */
+        padding: 0;
     }
-    100% {
-      transform: scale(1.5) translate(100%, -100%);
-      opacity: 0;
+    .cercle{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        background-color: #333333; 
+        width: 32vh; 
+        height:32vh;
     }
-  }
-  
+    .white-line1 {
+        background-color: white;
+        height: 100px; /* Hauteur initiale */
+        width: 12px;
+        margin: 0 20px;
+        border-radius: 4px;
+    }
+    
+    .white-line2 {
+        background-color: white;
+        height: 155px; /* Plus grand que white-line1 */
+        width: 12px;
+        margin: 0 20px;
+        border-radius: 4px;
+    }
+    
+    .white-line3 {
+        background-color: white;
+        height: 220px; /* Le plus grand */
+        width: 12px;
+        margin: 0 20px;
+        border-radius: 4px;
+    }
+    
+    .white-line4 {
+        background-color: white;
+        height: 155px; /* Plus petit que white-line3 */
+        width: 12px;
+        margin: 0 20px;
+        border-radius: 4px;
+    }
+    
+    .white-line5 {
+        background-color: white;
+        height: 100px; /* Reviens à la hauteur initiale de white-line1 */
+        width: 12px;
+        margin: 0 20px;
+        border-radius: 4px;
+    }
+    
+    .brand {
+        color: #333333;
+        margin-top: 5%;  /* Ajustez cette valeur selon l'espacement que vous souhaitez entre le logo et le brand */
+    }
+    .line {
+        width: 200px;
+        height: 8px;
+        background-color: #333333;
+        border-radius: 5px; /* Cette valeur divise la hauteur pour obtenir un effet arrondi */
+    }
+    
+
+    .background {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 1; /* Sous la div .musicnootjes */
+    }
+
+    .wave {
+        width: 100%; 
+        display: block;  /* Assure que le SVG est affiché en tant que bloc pour occuper toute la largeur */
+    }
+
+    header nav ul {
+        list-style: none;
+        display: flex;
+        align-items: center;
+    }
+    
+
+    .fileInput {
+        color: #ffffff;
+        display: block;
+        width: 80vh;
+        height: 6vh;
+        padding-left: 5%;
+        background-color: #334482;
+        border: none;
+        border-radius: 30px;
+        cursor: pointer; /* change le curseur pour indiquer que c'est cliquable */
+        outline: none; /* retire le contour par défaut lors de la sélection de l'input */
+        appearance: none; /* pour retirer l'apparence par défaut dans certains navigateurs */
+        -webkit-appearance: none; /* pour Chrome et Safari */
+        -moz-appearance: none; /* pour Firefox */
+    }
+
+    .fileInput::-webkit-file-upload-button {
+        visibility: hidden; /* retire le bouton par défaut dans Chrome et Safari */
+    }
+
+    .fileInput::before {
+        content: "Open file"; /* texte à afficher */
+        display: inline-block;
+        color: #ffffff; /* couleur du texte */
+        background-color: #334482;
+        border: none;
+        border-radius: 30px;
+        padding: 8px;
+    }
+
+    #searchForm {
+        position: absolute;
+        top: 55%; /* Positionnez le formulaire légèrement en dessous du milieu vertical de la page */
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+
+    .musicnootjes {
+        color: #334482;
+        display: block;
+        margin: auto;
+        position: absolute; /* Position absolue */
+        bottom: 20px; /* À partir du bas de la page */
+        left: 50%; /* Centré horizontalement */
+        transform: translateX(-50%); /* Pour centrer parfaitement */
+        width: 60%;
+        min-width: 300px;
+        height: 20%;
+        z-index: 2; /* Empiler par-dessus la wave */
+    }
+    
+    .noot-1,
+    .noot-2,
+    .noot-3,
+    .noot-4 {
+        position: absolute;
+        animation: notes 2s infinite linear;
+        font-size: 35px;
+        opacity: 0;
+        user-select: none;
+    }
+    
+    .noot-1 {
+        top: 60px;
+        left: 0;
+        animation-delay: 0.5s;
+    }
+    
+    .noot-2 {
+        top: 30px;
+        left: 30%;
+        animation-delay: 1s;
+    }
+    
+    .noot-3 {
+        top: 90px;
+        left: 60%;
+        animation-delay: 1.5s;
+    }
+    
+    .noot-4 {
+        top: 90%;
+        left: 90%;
+        animation-delay: 2s;
+    }
+    
+    @keyframes notes {
+        0% {
+        transform: scale(1) translate(0, 0);
+        opacity: 0;
+        }
+        50% {
+        opacity: 1;
+        transform: scale(1.5) translate(50%, -50%);
+        }
+        80% {
+        opacity: 0;
+        transform: scale(1.5) translate(100%, -100%);
+        }
+        100% {
+        transform: scale(1.5) translate(100%, -100%);
+        opacity: 0;
+        }
+    }
+    
+    /* .gg-music-note {
+        background-color: #334482;
+        opacity: calc(50%);
+        top: 20%;
+        left: 30%;
+        box-sizing: border-box;
+        position: relative;
+        display: block;
+        transform: scale(var(--ggs,1));
+        width: 2px;
+        height: 14px;
+        background: #334482;
+       }
+       
+       .gg-music-note::after,
+       .gg-music-note::before {
+        content: "";
+        display: block;
+        box-sizing: border-box;
+        position: absolute;
+        border: 2px solid
+       }
+       
+       .gg-music-note::before {
+        bottom: -4px;
+        width: 8px;
+        height: 8px;
+        left: -6px;
+        border-radius: 10px
+       }
+       
+       .gg-music-note::after {
+        width: 10px;
+        height: 6px;
+        top: -4px;
+        left: 0;
+        border-radius: 2px;
+        transform: skewY(-15deg)
+       }  */
