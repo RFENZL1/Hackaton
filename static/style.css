@@ -126,7 +126,7 @@
     }
     
 
-    .fileInput {
+    .audio-file {
         color: #ffffff;
         display: block;
         width: 80vh;
@@ -142,11 +142,11 @@
         -moz-appearance: none; /* pour Firefox */
     }
 
-    .fileInput::-webkit-file-upload-button {
+    .audio-file::-webkit-file-upload-button {
         visibility: hidden; /* retire le bouton par défaut dans Chrome et Safari */
     }
 
-    .fileInput::before {
+    .audio-file::before {
         content: "Open file"; /* texte à afficher */
         display: inline-block;
         color: #ffffff; /* couleur du texte */
