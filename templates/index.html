@@ -7,6 +7,7 @@
         <title>Harmonia</title>
     </head>
     <body>
+        <div id="data-container"></div>
         <div class="logo-title">
             <div class="cercle">
                 <div class="logo">
@@ -46,6 +47,8 @@
             &#9834;
             </div>
         </div>
-            
+            <script>var dataFromServer = "{{ data }}"; // Utilisation de Jinja2 pour insérer les données du serveur
+                var dataContainer = document.getElementById('data-container');
+                dataContainer.innerHTML = dataFromServer;</script>
     </body>
     </html>
